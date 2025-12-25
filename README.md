@@ -1,16 +1,83 @@
-# flutter_api_app
+# Flutter REST API Integration
 
-A new Flutter project.
+## Deskripsi
+Aplikasi ini merupakan aplikasi Flutter sederhana yang menerapkan operasi
+**CRUD (Create, Read, Update, Delete)** dengan integrasi **RESTful API**
+menggunakan **Node.js (Express)** sebagai backend.
 
-## Getting Started
+Aplikasi ini dibuat untuk memenuhi tugas mata kuliah **Integrasi RESTful API dengan Flutter**.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## Teknologi yang Digunakan
+- Flutter
+- Dart
+- Node.js
+- Express.js
+- HTTP Package (Flutter)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Arsitektur Sistem
+- **Frontend**: Flutter
+- **Backend**: REST API (Node.js + Express)
+- **Komunikasi Data**: HTTP (JSON)
+
+---
+
+## Konfigurasi API (Penting)
+
+Karena backend dijalankan secara lokal, maka:
+- `localhost` **tidak dapat digunakan** pada perangkat Android fisik
+- Harus menggunakan **IP Address laptop/PC**
+
+### Contoh Konfigurasi
+File:
+# Flutter REST API Integration
+
+## Deskripsi
+Aplikasi ini merupakan aplikasi Flutter sederhana yang menerapkan operasi
+**CRUD (Create, Read, Update, Delete)** dengan integrasi **RESTful API**
+menggunakan **Node.js (Express)** sebagai backend.
+
+Aplikasi ini dibuat untuk memenuhi tugas mata kuliah **Integrasi RESTful API dengan Flutter**.
+
+---
+
+## Teknologi yang Digunakan
+- Flutter
+- Dart
+- Node.js
+- Express.js
+- HTTP Package (Flutter)
+
+---
+
+## Arsitektur Sistem
+- **Frontend**: Flutter
+- **Backend**: REST API (Node.js + Express)
+- **Komunikasi Data**: HTTP (JSON)
+
+---
+
+## Konfigurasi API (Penting)
+
+Karena backend dijalankan secara lokal, maka:
+- `localhost` **tidak dapat digunakan** pada perangkat Android fisik
+- Harus menggunakan **IP Address laptop/PC**
+
+### Contoh Konfigurasi
+File:
+lib/services/api_service.dart
+static const String baseUrl = 'http://<IP_LAPTOP>:3000/users';
+
+
+1. Menjalankan Backend
+
+    node index.js
+
+Server akan berjalan pada: http://localhost:3000
+
+2. Menjalankan Aplikasi Flutter
+    flutter pub get
+    flutter run
